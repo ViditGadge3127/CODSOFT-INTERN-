@@ -1,10 +1,13 @@
 def task_manager():
-    tasks = []  # Initialize an empty list to store tasks
+    tasks = []  
     print("==== Welcome to Your Personal Task Manager ====")
     
     try:
+        
+        
         total_tasks = int(input("How many tasks would you like to add initially? "))
     except ValueError:
+       
         print("Please enter a valid number.")
         return
     
@@ -28,6 +31,7 @@ def task_manager():
             choice = int(input("Choose an option by entering the corresponding number: "))
             
             if choice == 1:
+               
                 new_task = input("Enter the name of the task you want to add: ")
                 tasks.append(new_task)
                 print(f"Task '{new_task}' added successfully.")
@@ -51,6 +55,7 @@ def task_manager():
                     print("Task not found. Please try again.")
             
             elif choice == 4:
+                
                 print("\nCurrent tasks:")
                 for task in tasks:
                     print(f"- {task}")
@@ -64,5 +69,6 @@ def task_manager():
         
         except ValueError:
             print("Invalid input. Please enter a valid number.")
-            
+
+
 task_manager()
